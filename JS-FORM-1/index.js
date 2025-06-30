@@ -38,11 +38,10 @@
 //     element.style.backgroundColor = "yellow";
 // }
 
-// mettre en jaune quand on appui sur n'importe quel p
-let element = document.getElementsByTagName("p") = function yellowClick(){
-    for (var i = 0; i < element.length; i++){
-        let test = element[i];
-        test.classList.onclick("p");
-        EventTarget(test.classList.onclick("p")).style.backgroundColor = "yellow";
-    }
-}
+// // mettre en jaune quand on appui sur n'importe quel p
+// let paragraphe = document.getElementsByTagName("p");
+// for (var i = 0; i < paragraphe.length; i++){
+//     paragraphe[i].onclick = function (event){
+//         event.target.style.backgroundColor = "yellow"; // event.target cible les elements a changer
+//     }
+// }
