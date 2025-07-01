@@ -7,45 +7,72 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--------------- exo 9 Récupération des valeurs du formulaire -------------->
-    <!-- <form> 
-        <label for="nom">Nom:</label>
-        <input id="nom" value="Michel" />
-        <label for="prenom">Prénom:</label>
-        <input id="prenom" value="Jean" />
-  </form> -->
-    <!-- <button id="mon-bouton1">Mon Beau Bouton</button> -->
-
-    
-    <section><!--------------- exo 9b calculatrice ---------------------------------->
+    <main>
+        <!--------------- exo 9 Récupération des valeurs du formulaire -------------->
         <!-- <form> 
-            <label for="premierNombre"></label>
-            <input id="premierNombre" value="" />
-            <input id="deuxiemeNombre" value="" />
-            <label for="resultat">Resultat: </label>
-            <input id="resultat" value="">
-            <button id="mon-bouton" type="button">click</button>
+            <label for="nom">Nom:</label>
+            <input id="nom" value="Michel" />
+            <label for="prenom">Prénom:</label>
+            <input id="prenom" value="Jean" />
         </form> -->
-    </section>
-    <section> <!--------------- exo 10------------->
-        <!-- <section> exo 10 afficher/cacher
-            <p id="premier">texte visible</p>
-            <p id="second" class="hidden">ce texte devrait etre caché</p>
-        </section> -->
+        <!-- <button id="mon-bouton1">Mon Beau Bouton</button> -->
 
-        <!-- <section> exo 10 cacher les spoilers
-            <p>C'est l'histoire d'un garçon troublé</p>
-            <p class="spoiler">car il s'avère que son ours en peluche a disparu</p>
-            <p class="spoiler">mais finalement il le retrouve</p>
-            <button id="spoilerButton" > cacher les spoiler</button>
-        </section> -->
-    
-        <!-- <section> exo 10 surbrillance au clic
-            <p id="premier">texte important</p>
-            <p id="second">autre texte</p>
-        </section> -->
-    </section>
-    
+        
+        <section><!--------------- exo 9b calculatrice ---------------------------------->
+            <!-- <form> 
+                <label for="premierNombre"></label>
+                <input id="premierNombre" value="" />
+                <input id="deuxiemeNombre" value="" />
+                <label for="resultat">Resultat: </label>
+                <input id="resultat" value="">
+                <button id="mon-bouton" type="button">click</button>
+            </form> -->
+        </section>
+        <section> <!--------------- exo 10------------->
+            <!-- <section> exo 10 afficher/cacher
+                <p id="premier">texte visible</p>
+                <p id="second" class="hidden">ce texte devrait etre caché</p>
+            </section> -->
+
+            <!-- <section> exo 10 cacher les spoilers
+                <p>C'est l'histoire d'un garçon troublé</p>
+                <p class="spoiler">car il s'avère que son ours en peluche a disparu</p>
+                <p class="spoiler">mais finalement il le retrouve</p>
+                <button id="spoilerButton" > cacher les spoiler</button>
+            </section> -->
+        
+            <!-- <section> exo 10 surbrillance au clic
+                <p id="premier">texte important</p>
+                <p id="second">autre texte</p>
+            </section> -->
+
+            <section> <!-- exo 10 filtrage par catégorie -->
+                <form method="get" action="">
+                    <p> <!-- menu déroulant-->
+                        <label for="choices">Catégories :</label>
+                        <select name="choices" id="choices">
+                            <option value="all">Tout</option>
+                            <option value="fantaisy">Fantaisie</option>
+                            <option value="romantic">Romance</option>
+                            <option value="dystopy">Dystopie</option>
+                        </select>
+                    </p>
+                    <div class="">
+                        <article class="fantaisy romantic">Fourth Wings</article>
+                        <article class="dystopy romantic">They Both Die At The End</article>
+                        <article class="dystopy">Hunger Games</article>
+                        <article class="dystopy">Labyrinthe</article>
+                        <article class="romantic">Dans Notre Univers, Nous Sommes Infinis</article>
+                        <article class="fantaisy romantic">Heartless Hunter</article>
+                        <article class="fantaisy">Nécropolis</article>
+                        <article class="fantaisy romantic">L'Empire D'Ecume</article>
+                        <article class="dystopy">Le Contrat</article>
+                        <article class="dystopy">Le Cri Des Chimères</article>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
 </body>
 <script src="index.js"></script>
 </html>

@@ -1,3 +1,16 @@
+body{
+    background: #4b3c5aa1;
+}
+
 .hidden{
     display: none;
+}
+
+/* exo 10 filtrage par categorie*/
+article {
+    padding: 1em;
+    margin: 1em;
+    background-color: #bea1daa1;
+    width:fit-content;
+    border-radius: 8px;
 }
