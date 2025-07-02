@@ -49,19 +49,13 @@
 
 //exo 10 Filtrage par catégorie----------------------------------------------------------------------------
 
-//je veux faire un objet avec des action ?
-// ou prendre la value de ceux qui ont pas fantaisie par ex et les enlever pour qu'ils ne s'affichent pas ?
-// si je clique sur all, tout s'affiche
-// si je met fantaisie ca met tout ceux qui ont la categorie fantaisie (meme si ils ont une autre categorie a faire attention)
-//pareil pour les autres
-
-function filtrer(categorie){
-    let livres = document.querySelectorAll(".books article"); //selection tout les article dans la div books
-    livres.forEach(livre => {
-        if (categorie === "all" || livre.classList.contains(categorie)){
-            livre.classList.remove("hidden2");//enleve ce qui cache aka la class hidden donc ca affiche le produit
+function filtrer(categorie){ // on creer une fonction qui va etre utilisé dans le html
+    let livres = document.querySelectorAll(".books article"); //selectionne tout les article qui sont dans la section books, on la stoc dans la var livres
+    livres.forEach(livre => { // on dit que pour chaque livre dans la variable livres / demander pour le =>
+        if (categorie === "all" || livre.classList.contains(categorie)){ //si la categorie, donc dans le html c'est this.value qui equivaut aux options de choix dans le select est egal a "all" ou une autte des value proposée comme romantic
+            livre.classList.remove("hidden2");//alors on enleve le css qui cache (dans le css c'est .books article.hidden2{}) donc ca affiche le livre
         } else{
-            livre.classList.add("hidden2"); //sinon tu caches le produit en mettant la class hidden
+            livre.classList.add("hidden2"); //sinon tu caches le livre // en mettant hidden2 qui est raccroché au css
         }
     });
 }

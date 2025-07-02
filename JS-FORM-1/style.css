@@ -7,13 +7,18 @@ body{
 }
 
 /* exo 10 filtrage par categorie*/
-.books article {
+.books{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.books article { /* les articles dans la class books // pour faire joli*/
     padding: 1em;
     margin: 1em;
     background-color: #bea1daa1;
     width:fit-content;
     border-radius: 8px;
 }
-.books article.hidden2{
+.books article.hidden2{ /*dans la class books qui contient les article on met le hidden2 rattaché pour qu'il puisse etre enlevé ou ajouté de la classList dans le JS*/
     display: none;
 }

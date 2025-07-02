@@ -47,17 +47,16 @@
             </section> -->
 
             <section> <!-- exo 10 filtrage par catégorie -->
-            
-                    <section> <!-- menu déroulant-->
+                    <section> <!-- menu déroulant des catégories-->
                         <label for="choices">Catégories :</label>
-                        <select name="choices" id="choices" onchange="filtrer(this.value)"> <!--c koa onchange filtrer-->
+                        <select name="choices" id="choices" onchange="filtrer(this.value)"> <!--c koa onchange / filtrer() c'est la fonction créé dans le JS-->
                             <option value="all">Tout</option>
                             <option value="fantaisy">Fantaisie</option>
                             <option value="romantic">Romance</option>
                             <option value="dystopy">Dystopie</option>
                         </select>
                     </section>
-                    <section class="books">
+                    <section class="books"> <!-- Livres proposés -->
                         <article class="fantaisy romantic">Fourth Wings</article>
                         <article class="dystopy romantic">They Both Die At The End</article>
                         <article class="dystopy">Hunger Games</article>
