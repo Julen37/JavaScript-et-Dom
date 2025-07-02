@@ -50,8 +50,8 @@
 //exo 10 Filtrage par catégorie----------------------------------------------------------------------------
 
 function filtrer(categorie){ // on creer une fonction qui va etre utilisé dans le html
-    let livres = document.querySelectorAll(".books article"); //selectionne tout les article qui sont dans la section books, on la stoc dans la var livres
-    livres.forEach(livre => { // on dit que pour chaque livre dans la variable livres / demander pour le =>
+    let livres = document.querySelectorAll(".books article"); //selectionne tout les article qui sont dans la div books, on la stoc dans la var livres
+    livres.forEach(livre => { // on dit que pour chaque livre dans la variable livres / fonction fléchée
         if (categorie === "all" || livre.classList.contains(categorie)){ //si la categorie, donc dans le html c'est this.value qui equivaut aux options de choix dans le select est egal a "all" ou une autte des value proposée comme romantic
             livre.classList.remove("hidden2");//alors on enleve le css qui cache (dans le css c'est .books article.hidden2{}) donc ca affiche le livre
         } else{
