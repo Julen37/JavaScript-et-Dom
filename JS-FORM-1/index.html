@@ -47,17 +47,17 @@
             </section> -->
 
             <section> <!-- exo 10 filtrage par catégorie -->
-                <form method="get" action="">
-                    <p> <!-- menu déroulant-->
+            
+                    <section> <!-- menu déroulant-->
                         <label for="choices">Catégories :</label>
-                        <select name="choices" id="choices">
+                        <select name="choices" id="choices" onchange="filtrer(this.value)"> <!--c koa onchange filtrer-->
                             <option value="all">Tout</option>
                             <option value="fantaisy">Fantaisie</option>
                             <option value="romantic">Romance</option>
                             <option value="dystopy">Dystopie</option>
                         </select>
-                    </p>
-                    <div class="">
+                    </section>
+                    <section class="books">
                         <article class="fantaisy romantic">Fourth Wings</article>
                         <article class="dystopy romantic">They Both Die At The End</article>
                         <article class="dystopy">Hunger Games</article>
@@ -68,8 +68,7 @@
                         <article class="fantaisy romantic">L'Empire D'Ecume</article>
                         <article class="dystopy">Le Contrat</article>
                         <article class="dystopy">Le Cri Des Chimères</article>
-                    </div>
-                </form>
+                    </section> 
             </section>
         </section>
     </main>

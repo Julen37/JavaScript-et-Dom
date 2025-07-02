@@ -54,3 +54,14 @@
 // si je clique sur all, tout s'affiche
 // si je met fantaisie ca met tout ceux qui ont la categorie fantaisie (meme si ils ont une autre categorie a faire attention)
 //pareil pour les autres
+
+function filtrer(categorie){
+    let livres = document.querySelectorAll(".books article"); //selection tout les article dans la div books
+    livres.forEach(livre => {
+        if (categorie === "all" || livre.classList.contains(categorie)){
+            livre.classList.remove("hidden2");//enleve ce qui cache aka la class hidden donc ca affiche le produit
+        } else{
+            livre.classList.add("hidden2"); //sinon tu caches le produit en mettant la class hidden
+        }
+    });
+}

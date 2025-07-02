@@ -7,10 +7,13 @@ body{
 }
 
 /* exo 10 filtrage par categorie*/
-article {
+.books article {
     padding: 1em;
     margin: 1em;
     background-color: #bea1daa1;
     width:fit-content;
     border-radius: 8px;
+}
+.books article.hidden2{
+    display: none;
 }
