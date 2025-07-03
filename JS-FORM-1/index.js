@@ -48,7 +48,6 @@
 
 
 //exo 10 Filtrage par catégorie----------------------------------------------------------------------------
-
 function filtrer(categorie){ // on creer une fonction qui va etre utilisée dans le html avec pour parametre categorie
     let livres = document.querySelectorAll(".books article"); //selectionne tous les article qui sont dans la div books, qu'on stock dans la variable livres
     livres.forEach(livre => { // on dit que pour chaque livre dans la variable livres / fonction fléchée / je parcours chaque livre dans la liste de livres
@@ -59,4 +58,42 @@ function filtrer(categorie){ // on creer une fonction qui va etre utilisée dans
             livre.classList.add("hide"); //sinon tu caches le livre // en mettant .hide qui est raccroché au css
         }
     });
+}
+
+//exo 11 changer la couleur du parent au clic
+// let bouton = document.getElementsByTagName("button");=
+// for (i = 0; i < bouton.length; i++){
+//     bouton[i].onclick = function(event){
+//         event.target.parentNode.style.backgroundColor = "yellow";
+//     }
+// }
+
+//exo 11 changer la couleur du parent au clic et la remettre comme avant au second clic
+// let bouton = document.getElementsByTagName("button");
+// for (i = 0; i < bouton.length; i++){
+//     bouton[i].onclick = function(event){
+//         let parent = event.target.parentNode;
+//         if(parent.style.backgroundColor === "yellow"){ // si le backgroundcolor est jaune
+//             parent.style.backgroundColor = ""; // alors on met la couleur vide
+//         }else{
+//             event.target.parentNode.style.backgroundColor = "yellow"; //sinon on le colore en jaune
+//         }
+//     }
+// }
+
+//exo 11 changer la couleur du parent et du grand parent au clic et les remettre comme avant au second clic
+let bouton = document.getElementsByTagName("button");
+for (i = 0; i < bouton.length; i++){
+    bouton[i].onclick = function(event){
+        let parent = event.target.parentNode;
+        let grandparent = parent.parentNode; // le parent du parent
+        if(parent.style.backgroundColor === "yellow" && grandparent.style.backgroundColor === "blue" ){  
+            //si le style de backgroundcolor du parent est jaune ET si le style de backgroundcolor du grandparent est bleu
+            parent.style.backgroundColor = ""; 
+            grandparent.style.backgroundColor = "";
+        }else{
+            parent.style.backgroundColor = "yellow";
+            grandparent.style.backgroundColor = "blue";
+        }
+    }
 }
