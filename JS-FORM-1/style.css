@@ -19,6 +19,6 @@ body{
     width:fit-content;
     border-radius: 8px;
 }
-.books article.hidden2{ /*dans la class books qui contient les article on met le hidden2 rattaché pour qu'il puisse etre enlevé ou ajouté de la classList dans le JS*/
+.books article.hide{ /*dans la class books qui contient les article on met le hidden2 rattaché pour qu'il puisse etre enlevé ou ajouté de la classList dans le JS*/
     display: none;
 }

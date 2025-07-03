@@ -49,13 +49,14 @@
 
 //exo 10 Filtrage par catégorie----------------------------------------------------------------------------
 
-function filtrer(categorie){ // on creer une fonction qui va etre utilisé dans le html
-    let livres = document.querySelectorAll(".books article"); //selectionne tout les article qui sont dans la div books, on la stoc dans la var livres
-    livres.forEach(livre => { // on dit que pour chaque livre dans la variable livres / fonction fléchée
-        if (categorie === "all" || livre.classList.contains(categorie)){ //si la categorie, donc dans le html c'est this.value qui equivaut aux options de choix dans le select est egal a "all" ou une autte des value proposée comme romantic
-            livre.classList.remove("hidden2");//alors on enleve le css qui cache (dans le css c'est .books article.hidden2{}) donc ca affiche le livre
+function filtrer(categorie){ // on creer une fonction qui va etre utilisée dans le html avec pour parametre categorie
+    let livres = document.querySelectorAll(".books article"); //selectionne tous les article qui sont dans la div books, qu'on stock dans la variable livres
+    livres.forEach(livre => { // on dit que pour chaque livre dans la variable livres / fonction fléchée / je parcours chaque livre dans la liste de livres
+        if (categorie === "all" || livre.classList.contains(categorie)){ //si la categorie (donc dans le html c'est this.value qui equivaut aux options de choix dans le select) est strictement egal a "all" ou si livre possede la classe de la categorie sélectionnée (aka une autre des value proposée comme romantic)
+            // on le met comme ca pour eviter de mettre tous les else if un par un
+            livre.classList.remove("hide");//alors on enleve la class dans le css qui cache (dans le css c'est .books article.hide{}) donc ca affiche le livre
         } else{
-            livre.classList.add("hidden2"); //sinon tu caches le livre // en mettant hidden2 qui est raccroché au css
+            livre.classList.add("hide"); //sinon tu caches le livre // en mettant .hide qui est raccroché au css
         }
     });
 }
