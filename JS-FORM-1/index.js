@@ -82,18 +82,34 @@ function filtrer(categorie){ // on creer une fonction qui va etre utilisée dans
 // }
 
 //exo 11 changer la couleur du parent et du grand parent au clic et les remettre comme avant au second clic
-let bouton = document.getElementsByTagName("button");
-for (i = 0; i < bouton.length; i++){
+// let bouton = document.getElementsByTagName("button");
+// for (i = 0; i < bouton.length; i++){
+//     bouton[i].onclick = function(event){
+//         let parent = event.target.parentNode;
+//         let grandparent = parent.parentNode; // le parent du parent
+//         if(parent.style.backgroundColor === "yellow" && grandparent.style.backgroundColor === "blue" ){  
+//             //si le style de backgroundcolor du parent est jaune ET si le style de backgroundcolor du grandparent est bleu
+//             parent.style.backgroundColor = ""; 
+//             grandparent.style.backgroundColor = "";
+//         }else{
+//             parent.style.backgroundColor = "yellow";
+//             grandparent.style.backgroundColor = "blue";
+//         }
+//     }
+// }
+
+//exo 11 construire une page web en JavaScript
+// creation imput
+var champ = document.createElement("input");
+document.section;exo11.appendChild(champ);
+// creation bouton et son text
+var bouton = document.createElement("button");
+var textBouton = document.createTextNode("clique pour vider");
+bouton.appendChild(textBouton);
+document.section;exo11.appendChild(bouton);
+
+for (i=0; i < bouton.length; i++){
     bouton[i].onclick = function(event){
-        let parent = event.target.parentNode;
-        let grandparent = parent.parentNode; // le parent du parent
-        if(parent.style.backgroundColor === "yellow" && grandparent.style.backgroundColor === "blue" ){  
-            //si le style de backgroundcolor du parent est jaune ET si le style de backgroundcolor du grandparent est bleu
-            parent.style.backgroundColor = ""; 
-            grandparent.style.backgroundColor = "";
-        }else{
-            parent.style.backgroundColor = "yellow";
-            grandparent.style.backgroundColor = "blue";
-        }
+        document.section;exo11.removeChild("input").value;
     }
 }
