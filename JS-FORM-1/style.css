@@ -23,3 +23,6 @@ body{
     display: none;
 }
 
+.swal-button {
+    background-color: #bea1daa1;
+}

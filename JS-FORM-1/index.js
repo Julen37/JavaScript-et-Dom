@@ -86,14 +86,14 @@ function filtrer(categorie){ // on creer une fonction qui va etre utilisée dans
 // for (i = 0; i < bouton.length; i++){
 //     bouton[i].onclick = function(event){
 //         let parent = event.target.parentNode;
-//         let grandparent = parent.parentNode; // le parent du parent
+//         let grandparent = parent.parentNode; // le parent du parent aka le grandparent
 //         if(parent.style.backgroundColor === "yellow" && grandparent.style.backgroundColor === "blue" ){  
 //             //si le style de backgroundcolor du parent est jaune ET si le style de backgroundcolor du grandparent est bleu
 //             parent.style.backgroundColor = ""; 
-//             grandparent.style.backgroundColor = "";
+//             grandparent.style.backgroundColor = ""; // met le background color vide pour qu'il redevienne de base
 //         }else{
-//             parent.style.backgroundColor = "yellow";
-//             grandparent.style.backgroundColor = "blue";
+//             parent.style.backgroundColor = "yellow"; // met le background color du parent en jaune
+//             grandparent.style.backgroundColor = "blue"; // met le background color du grand parent en bleu
 //         }
 //     }
 // }
@@ -108,7 +108,11 @@ var bouton = document.createElement("button"); //creation du bouton
 var textBouton = document.createTextNode("clique pour vider"); //creation du texte a l'interieur du bouton
 bouton.appendChild(textBouton); // ajouter le texte enfant au bouton parent
 document.section;exoSection.appendChild(bouton); //ajouter le bouton enfant a la section parent
+// aussi on peut faire document.getElementById("exoSection").appendChild(bouton)
 
 bouton.onclick = function (){
     champ.value = ""; // on efface la value de l'input qui est dans la var champ
 }
+
+//component SweetAlert, premiere API
+swal("Bienvenue !", "Tu arrives sur la librairie", "info");
