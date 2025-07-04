@@ -115,4 +115,9 @@ bouton.onclick = function (){
 }
 
 //component SweetAlert, premiere API
-swal("Bienvenue !", "Tu arrives sur la librairie", "info");
+swal({
+  title: "Bienvenue !",
+  text: "Tu arrives sur la librairie",
+  icon: "info",
+  button: "Découvrir",
+});

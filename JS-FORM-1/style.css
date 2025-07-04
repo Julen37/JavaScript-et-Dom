@@ -23,6 +23,6 @@ body{
     display: none;
 }
 
-.swal-button {
+.swal-button { /*modification de la couleur du bouton sweet alert*/
     background-color: #bea1daa1;
 }
