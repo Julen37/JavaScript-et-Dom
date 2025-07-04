@@ -22,3 +22,4 @@ body{
 .books article.hide{ /*dans la class books qui contient les article on met le hidden2 rattaché pour qu'il puisse etre enlevé ou ajouté de la classList dans le JS*/
     display: none;
 }
+

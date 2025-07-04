@@ -100,16 +100,15 @@ function filtrer(categorie){ // on creer une fonction qui va etre utilisée dans
 
 //exo 11 construire une page web en JavaScript
 // creation imput
-var champ = document.createElement("input");
-document.section;exo11.appendChild(champ);
-// creation bouton et son text
-var bouton = document.createElement("button");
-var textBouton = document.createTextNode("clique pour vider");
-bouton.appendChild(textBouton);
-document.section;exo11.appendChild(bouton);
+var champ = document.createElement("input"); //creation de l'input
+document.section;exoSection.appendChild(champ); //ajouter l'input enfant a la section parent // le ;exoSection c'est pour prendre l'id de la section qu'on veut pour mettre dedans specifiquement
 
-for (i=0; i < bouton.length; i++){
-    bouton[i].onclick = function(event){
-        document.section;exo11.removeChild("input").value;
-    }
+// creation bouton et son text
+var bouton = document.createElement("button"); //creation du bouton
+var textBouton = document.createTextNode("clique pour vider"); //creation du texte a l'interieur du bouton
+bouton.appendChild(textBouton); // ajouter le texte enfant au bouton parent
+document.section;exoSection.appendChild(bouton); //ajouter le bouton enfant a la section parent
+
+bouton.onclick = function (){
+    champ.value = ""; // on efface la value de l'input qui est dans la var champ
 }
