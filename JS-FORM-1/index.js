@@ -208,6 +208,30 @@ class SommeNumber { //majuscule a mettre pour differencer les class des var
 }
 //utilisation de la classe
 const numberList = [1, 2, 3, 4, 5]; // =15
-const sommeNumber = new SommeNumber(numberList); 
-sommeNumber.displayResult(); 
+const resultNumber = new SommeNumber(numberList); 
+resultNumber.displayResult(); 
 
+// ------------------exo 5 class armes et sort dans le terminal----------------------
+class Weapons{
+    constructor(hammer, sword, bow){
+        this.hammer = hammer;
+        this.sword = sword;
+        this.bow = bow;
+    }
+    displayWeapons(){
+        console.log(`The weapons are a ${this.hammer}, a ${this.sword} and a ${this.bow}.`);
+
+    }
+}
+class Spell{
+    constructor(fireball, healthUpgrade, snowFlakes){
+        this.fireball = fireball;
+        this.healthUpgrade = healthUpgrade;
+        this.snowFlakes = snowFlakes;
+    }
+}
+
+// var weapons = new Weapons("hammer", "sword", "bow");
+// var spells = new Spell("fireball", "health upgrade", "snow flakes");
+// console.log(`The weapons are a ${weapons.hammer}, a ${weapons.sword} and a ${weapons.bow}.`);
+// console.log(`The weapons are ${spells.fireball}, ${spells.healthUpgrade} and ${spells.snowFlakes}.`);
