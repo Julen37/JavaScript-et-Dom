@@ -173,7 +173,7 @@ document.getElementById("modalBtn").onclick = function(){
 document.getElementById("closeBtn").onclick = function(){ 
     document.getElementById("modal").classList.remove("active"); 
 };
-// window.onclick = function(){ //fonctionne pas
+// window.onclick = function(){ //fonctionne pas pcq j'ai pas fait d'event target, fonctionne que si c'est en popup pas avec le bouton
 //     document.getElementById("modal").classList.remove("active");
 // };
 
@@ -183,7 +183,31 @@ document.getElementById("closeBtn").onclick = function(){
 // document.getElementById("closeBtn").onclick = () => modal.classList.remove("active");
 window.onclick = (e) => {
     if(e.target === modal){
-        modal.classList.remove("active");
+        modal.classList.remove("active"); 
+        // fait que si on clique sur la fenetre ca ferme aussi, pas besoin d'aappuyer forcement sur la croix
     }
 }
+
+//----------------------------exo 4 class avec jeremie----------------------
+
+class SommeNumber { //majuscule a mettre pour differencer les class des var
+    constructor(numberList){
+        this.listNumber = numberList; 
+    }
+    calculateSomme() { //fonction qui calcule la somme
+        let somme = 0;
+        for (let number of this.listNumber){ // pour nombre de la liste des nombres 
+            somme += number;
+        }
+        return somme;
+    }
+    displayResult(){ //donne le resultat de la fonction calculateSomme()
+        const result = this.calculateSomme();
+        console.log(`La somme des nombre de la liste est : ${result}`);
+    }
+}
+//utilisation de la classe
+const numberList = [1, 2, 3, 4, 5]; // =15
+const sommeNumber = new SommeNumber(numberList); 
+sommeNumber.displayResult(); 
 
