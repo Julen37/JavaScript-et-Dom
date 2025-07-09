@@ -100,25 +100,90 @@ function filtrer(categorie){ // on creer une fonction qui va etre utilisée dans
 
 //exo 11 construire une page web en JavaScript
 // creation imput
-var champ = document.createElement("input"); //creation de l'input
-document.section;exoSection.appendChild(champ); //ajouter l'input enfant a la section parent // le ;exoSection c'est pour prendre l'id de la section qu'on veut pour mettre dedans specifiquement
+// var champ = document.createElement("input"); //creation de l'input
+// document.section;exoSection.appendChild(champ); //ajouter l'input enfant a la section parent // le ;exoSection c'est pour prendre l'id de la section qu'on veut pour mettre dedans specifiquement
 
-// creation bouton et son text
-var bouton = document.createElement("button"); //creation du bouton
-var textBouton = document.createTextNode("clique pour vider"); //creation du texte a l'interieur du bouton
-bouton.appendChild(textBouton); // ajouter le texte enfant au bouton parent
-document.section;exoSection.appendChild(bouton); //ajouter le bouton enfant a la section parent
-// aussi on peut faire document.getElementById("exoSection").appendChild(bouton)
+// // creation bouton et son text
+// var bouton = document.createElement("button"); //creation du bouton
+// var textBouton = document.createTextNode("clique pour vider"); //creation du texte a l'interieur du bouton
+// bouton.appendChild(textBouton); // ajouter le texte enfant au bouton parent
+// document.section;exoSection.appendChild(bouton); //ajouter le bouton enfant a la section parent
+// // aussi on peut faire document.getElementById("exoSection").appendChild(bouton)
 
-bouton.onclick = function (){
-    champ.value = ""; // on efface la value de l'input qui est dans la var champ
-}
+// bouton.onclick = function (){
+//     champ.value = ""; // on efface la value de l'input qui est dans la var champ
+// }
 
 //component SweetAlert, premiere API
-swal({
-  title: "Bienvenue !",
-  text: "Tu arrives sur la librairie",
-  icon: "info",
-  button: "Découvrir",
-});
+// swal({
+//   title: "Bienvenue !",
+//   text: "Tu arrives sur la librairie",
+//   icon: "info",
+//   button: "Découvrir",
+// });
+
+
+// --------------------------------------------JS INTERMEDIAIRE-----------------------------------------------------
+
+//exercice 2 palindrome
+
+function palindrome(string) {
+    return string === string.split("").reverse().join("")
+    //split divise la chaine de caractere en tableau ex tableau devient [t, a, b, l, e, a, u]
+    //reverse inverse le tableau donc [u, a, e, l, b, a, t]
+    // join remet le tableau en chaine donc "uaelbat"
+    // verifie que le mot donné en string est le meme que celui à la fin de join
+}
+let mot = "racecar";
+let motPalindrome = palindrome(mot);
+console.log(motPalindrome)
+
+//exercice II a refaire feu tricolore
+
+// let lights = document.querySelectorAll("light");
+// let currentIndex = 0; 
+
+// function changeColor(){
+//     for(i = 0; lights.length; i++){ 
+//         if(i === currentIndex){
+//             lights[i].classList.add("colorRed");
+//             lights[i].classList.remove("colorYellow");
+//             lights[i].classList.remove("colorGreen");
+//         } else if (i === currentIndex + 1) {
+//             lights[i].classList.remove("colorRed");
+//             lights[i].classList.add("colorYellow");
+//             lights[i].classList.remove("colorGreen");
+//         } else {
+//             lights[i].classList.remove("colorRed");
+//             lights[i].classList.remove("colorYellow");
+//             lights[i].classList.add("colorGreen");
+//         }
+//         if(currentIndex >= lights.length){
+//             currentIndex = 0
+//         }
+//     }
+// }
+// changeColor();
+// setInterval(changeColor, 2000); //change de couleur toutes les 2secondes
+
+//-------------exercice 3 modal----------------
+document.getElementById("modalBtn").onclick = function(){
+    document.getElementById("modal").classList.add("active");
+};
+document.getElementById("closeBtn").onclick = function(){ 
+    document.getElementById("modal").classList.remove("active"); 
+};
+// window.onclick = function(){ //fonctionne pas
+//     document.getElementById("modal").classList.remove("active");
+// };
+
+//--------correction y a juste le window onclick qui change
+// let modal = document.getElementById("modal");
+// document.getElementById("modalBtn").onclick = () => modal.classList.add("active");
+// document.getElementById("closeBtn").onclick = () => modal.classList.remove("active");
+window.onclick = (e) => {
+    if(e.target === modal){
+        modal.classList.remove("active");
+    }
+}
 
