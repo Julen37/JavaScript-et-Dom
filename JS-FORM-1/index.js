@@ -291,14 +291,14 @@ class Healer extends Character{
         // return `The healer ${this.name} : ${this.health} of health, ${this.strengh} of strengh and they can use the potion ${this.potion} because they are a ${this.status}.`;
     }
 };
-let warrior = new Warrior("Aiden", "520", "853", "assassin warrior", "dagger"); // toute les infos dans l'ordre du constructor
+let warrior = new Warrior("Aiden", 520, 853, "assassin warrior", "dagger"); // toute les infos dans l'ordre du constructor
 console.log(warrior.display());
 
-let warlock = new Warlock("Lara", "140", "842", "dark warlock", "smoke");
+let warlock = new Warlock("Lara", 140, 842, "dark warlock", "smoke");
 console.log(warlock.display());
 
-let dragonborn = new Dragonborn("Drake", "340", "852", "dragonborn rider", "fire dragon");
+let dragonborn = new Dragonborn("Drake", 340, 852, "dragonborn rider", "fire dragon");
 console.log(dragonborn.display());
 
-let healer = new Healer("Jake", "102", "42", "healer", "resurrection");
+let healer = new Healer("Jake", 102, 42, "healer", "resurrection");
 console.log(healer.display());
