@@ -221,7 +221,7 @@ class Weapons{
     displayWeapons(){
         return `The weapons are a ${this.hammer}, a ${this.sword} and a ${this.bow}.`;
     }
-}
+};
 class Spell{
     constructor(fireball, healthUpgrade, snowFlakes){
         this.fireball = fireball;
@@ -231,9 +231,74 @@ class Spell{
     displaySpells(){
         return `The weapons are a ${this.fireball}, a ${this.healthUpgrade} and a ${this.snowFlakes}.`;
     }
-}
+};
 
-var weapons = new Weapons("hammer", "sword", "bow");
-var spells = new Spell("fireball", "health upgrade", "snow flakes");
+let weapons = new Weapons("hammer", "sword", "bow");
+let spells = new Spell("fireball", "health upgrade", "snow flakes");
 console.log(weapons.displayWeapons());
 console.log(spells.displaySpells());
+
+//------------------------------------exo 6 class heritage jeu personnages-----------------------------------------------
+
+class Character{
+    constructor(name, health, strengh, status){
+        this.name = name;
+        this.health = health;
+        this.strengh = strengh;
+        this.status = status;
+    }
+    display(){ // si ils l'ont tous alors on peut faire ca pour ne pas se repeter dans chaque classe enfant
+        return `The ${this.status}'s name is ${this.name}, they got ${this.health} of health, ${this.strengh} of strengh and`; 
+    }
+};
+class Warrior extends Character{
+    constructor(name, health, strengh, status, weapon){ //mettre les parametre de la mere qu'on utilise
+        super(name, health, strengh, status); // rappel les var this de la class mere avec super()
+        this.weapon = weapon;
+    }
+    display(){
+        return `${super.display()} they got a ${this.weapon}.`; //retourne la fonction mere display avec super et ajoute les infos spécifique du warrior
+        // return `The warrior ${this.name} : ${this.health} of health, ${this.strengh} of strengh and they got a ${this.weapon} because they are an ${this.status}.`; // // fonctionne mais c'est long et repetitif, pour rappeler les var de la mere on utilise this ca fonctionne
+    }
+};
+class Warlock extends Character{
+    constructor(name, health, strengh, status, spell){
+        super(name, health, strengh, status);
+        this.spell = spell;
+    }
+    display(){
+        return `${super.display()} they can use the spell ${this.spell}.`;
+        // return `The warlock ${this.name} : ${this.health} of health, ${this.strengh} of strengh and they can use the spell ${this.spell} because they are a ${this.status}.`;
+    }
+};
+class Dragonborn extends Character{
+    constructor(name, health, strengh, status, dragon){
+        super(name, health, strengh, status);
+        this.dragon = dragon;
+    }
+    display(){
+        return `${super.display()} they can ride their ${this.dragon}.`;
+        // return `The dragonborn ${this.name} : ${this.health} of health, ${this.strengh} of strengh and they can ride their ${this.dragon} because they are a ${this.status}.`;
+    }
+};
+class Healer extends Character{
+    constructor(name, health, strengh, status, potion){
+        super(name, health, strengh, status);
+        this.potion = potion;
+    }
+    display(){
+        return `${super.display()} they can use the potion ${this.potion}.`;
+        // return `The healer ${this.name} : ${this.health} of health, ${this.strengh} of strengh and they can use the potion ${this.potion} because they are a ${this.status}.`;
+    }
+};
+let warrior = new Warrior("Aiden", "520", "853", "assassin warrior", "dagger"); // toute les infos dans l'ordre du constructor
+console.log(warrior.display());
+
+let warlock = new Warlock("Lara", "140", "842", "dark warlock", "smoke");
+console.log(warlock.display());
+
+let dragonborn = new Dragonborn("Drake", "340", "852", "dragonborn rider", "fire dragon");
+console.log(dragonborn.display());
+
+let healer = new Healer("Jake", "102", "42", "healer", "resurrection");
+console.log(healer.display());
